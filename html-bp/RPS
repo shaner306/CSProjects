@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function computerPlay(){
+            b= Math.floor(Math.random() * 3) + 1
+            if (b == 1) {
+                compSel = "rock"
+            }
+            else if (b == 2) {
+                compSel = "paper"
+
+            }
+            else{
+                compSel = "scissors"
+            }
+        console.log(compSel)
+        return compSel
+        }
+
+
+        function playRound(computerSelection, playerSelection){
+            if (playerSelelection=="rock" && computerSelection=="rock"){
+                return "Tie"
+                console.log "Tie"
+            }
+            if (playerSelelection=="rock" && computerSelection=="paper"){
+                return "Computer Wins"
+            }
+            if (playerSelelection=="rock" && computerSelection=="scissors"){
+                return "Player Wins"
+            }
+            if (playerSelelection=="paper" && computerSelection=="rock"){
+                return "Player Wins"
+            }
+            if (playerSelelection=="paper" && computerSelection=="paper"){
+                return "Tie"
+            }
+            if (playerSelelection=="paper" && computerSelection=="scissors"){
+                return "Computer Wins"
+            }
+            if (playerSelelection=="scissors" && computerSelection=="rock"){
+                return "Computer Wins"
+            }
+            if (playerSelelection=="scissors" && computerSelection=="paper"){
+                return "Player Wins"
+            }
+            if (playerSelelection=="scissors" && computerSelection=="scissors"){
+                return "Tie"
+            }
+
+        }
+        const playerSelection = "rock";
+        const computerSelection = computerPlay();
+        console.log(playRound(playerSelection, computerSelection));
+    </script>
+</body>
+</html>
